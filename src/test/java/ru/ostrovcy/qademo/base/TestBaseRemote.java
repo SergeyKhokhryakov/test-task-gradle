@@ -26,8 +26,8 @@ public class TestBaseRemote {
     // для параметра Configuration.pageLoadTimeout не хватает значения по умолчанию (30 сек.),
     // https://demoqa.com имеет проблемы в загрузке контента страницы (Stalled, CAUTION: request isn't finished yet!) продолжительностью более 26 сек.
     Configuration.pageLoadTimeout = 60000;
-    String selenoidAddress = System.getProperty("selenoid", "selenoid.autotests.cloud/wd/hub");
-//    String selenoidAddress = System.getProperty("selenoid");
+//    String selenoidAddress = System.getProperty("selenoid", "selenoid.autotests.cloud/wd/hub");
+    String selenoidAddress = System.getProperty("selenoid");
     Configuration.remote = "https://user1:1234@" + selenoidAddress;
     String browser = System.getProperty("browser");
     Configuration.browser = browser;
