@@ -2,6 +2,7 @@ package ru.ostrovcy.qademo;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.ostrovcy.qademo.base.TestBaseRemote;
 
@@ -20,7 +21,7 @@ public class TaskRemoteTest extends TestBaseRemote {
   @Story("Элементы на странице demoqa.com")
   @Severity(SeverityLevel.CRITICAL)
   @DisplayName("Позитивный тест: Шаги с аннотацией @Step")
-
+  @Tag("remote")
   public void test() {
     startPage.open()
             .goToElementsCategory()
