@@ -21,17 +21,15 @@ public class TestBaseRemote {
 
   @BeforeAll
   static void init() {
-    Configuration.browserSize = "1920x1080";
+
     Configuration.baseUrl = BASE_URL;
     // для параметра Configuration.pageLoadTimeout не хватает значения по умолчанию (30 сек.),
     // https://demoqa.com имеет проблемы в загрузке контента страницы (Stalled, CAUTION: request isn't finished yet!) продолжительностью более 26 сек.
     Configuration.pageLoadTimeout = 60000;
-//    String selenoidAddress = System.getProperty("selenoid", "selenoid.autotests.cloud/wd/hub");
-    String selenoidAddress = System.getProperty("selenoid");
-    Configuration.remote = "https://user1:1234@" + selenoidAddress;
-    String browser = System.getProperty("browser");
-    Configuration.browser = browser;
-//    Configuration.browserVersion = "100.0";
+    Configuration.remote = "https://user1:1234@" + System.getProperty("selenoidRemoteAddress", "selenoid.autotests.cloud/wd/hub");
+    Configuration.browser = System.getProperty("browser");
+    Configuration.browserSize = System.getProperty("browserSize","1920x1080");
+    Configuration.browserVersion = System.getProperty("browserVersion","100.0");
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("selenoid:options", Map.<String, Object>of(
