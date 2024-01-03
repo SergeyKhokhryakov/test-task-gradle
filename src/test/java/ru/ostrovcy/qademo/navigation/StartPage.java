@@ -2,8 +2,7 @@ package ru.ostrovcy.qademo.navigation;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
-
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 /**
  * Стартовая страница сайта https://demoqa.com/,
