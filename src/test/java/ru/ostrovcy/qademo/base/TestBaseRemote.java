@@ -28,7 +28,7 @@ public class TestBaseRemote {
     Configuration.pageLoadTimeout = 60000;
     String s = "s",
             password = System.getProperty("psw");
-    if (password == null) {
+    if (password == null || password.equals("")) {
       password = "";
       s = "";
     }
