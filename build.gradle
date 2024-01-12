@@ -30,7 +30,7 @@ dependencies {
     implementation 'net.datafaker:datafaker:1.8.1'
 
     testImplementation (
-            'com.codeborne:selenide:6.19.1',  // 6.16.0 5.22.0 6.12.3 // 6.19.1 - работает с локальным браузером 120 версии
+            'com.codeborne:selenide:6.16.0',  // 6.16.0 5.22.0 6.12.3 // 6.19.1 - работает с локальным браузером 120 версии
             "io.qameta.allure:allure-selenide:$allureVersion",
             'com.github.javafaker:javafaker:1.0.2',
             'org.junit.jupiter:junit-jupiter:5.7.2', // 5.9.3
