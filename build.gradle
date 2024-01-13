@@ -10,7 +10,7 @@ repositories {
 group 'guru.qa'
 version '1.0'
 
-def allureVersion = "2.21.0"
+def allureVersion = "2.20.1"
 
 allure {
     report {
@@ -30,10 +30,10 @@ dependencies {
     implementation 'net.datafaker:datafaker:1.8.1'
 
     testImplementation (
-            'com.codeborne:selenide:6.19.1',  // 6.16.0 5.22.0 6.12.3 // 6.19.1 - работает с локальным браузером 120 версии
-            "io.qameta.allure:allure-selenide:$allureVersion",
+            'com.codeborne:selenide:6.11.0',  // 6.16.0 5.22.0 6.12.3 // 6.19.1 - работает с локальным браузером 120 версии
+            "io.qameta.allure:allure-selenide:2.17.3",
             'com.github.javafaker:javafaker:1.0.2',
-            'org.junit.jupiter:junit-jupiter:5.7.2', // 5.9.3
+            'org.junit.jupiter:junit-jupiter:5.9.2', // 5.9.3
             'org.assertj:assertj-core:3.25.1',
             'org.aeonbits.owner:owner:1.0.12',
             'org.slf4j:slf4j-simple:2.0.7'  // 2.0.7
