@@ -22,11 +22,8 @@ public class WebProvider {
   private void createWeb() {
 
     Configuration.baseUrl = webConfig.getBaseUrl();
-//    Configuration.baseUrl = "https://demoqa.com";
     Configuration.browserSize = webConfig.getBrowserSize();
-//    Configuration.browserSize = "1920x1080";
     Configuration.pageLoadTimeout = DELAY;
-//    Configuration.browser = Browser.CHROME.toString();
     if (webConfig.isRemote() == true) {
       Configuration.browser = webConfig.getBrowser().toString();
       Configuration.browserVersion = webConfig.getBrowserVersion();
@@ -40,8 +37,7 @@ public class WebProvider {
         userName = authConfig.getUserName() + ":";
         password += "@";
       }
-//      Configuration.remote = "http" + s + "://" + userName + password + webConfig.getRemoteUrl() + "/wd/hub";
-      Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+      Configuration.remote = "http" + s + "://" + userName + password + webConfig.getRemoteUrl() + "/wd/hub";
 
       DesiredCapabilities capabilities = new DesiredCapabilities();
       capabilities.setCapability("selenoid:options", Map.<String, Object>of(
