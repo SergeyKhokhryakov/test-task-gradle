@@ -46,7 +46,6 @@ public class Attach extends WebProvider {
 
     public static URL getVideoUrl() {
       String videoUrl  = "http://" + webConfig.getRemoteUrl() + "/video/" + sessionId() + ".mp4";
-//        System.out.println(sessionId());
       try {
         return new URL(videoUrl);
       } catch (MalformedURLException e) {
