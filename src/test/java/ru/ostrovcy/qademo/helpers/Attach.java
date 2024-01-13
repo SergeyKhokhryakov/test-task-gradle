@@ -45,8 +45,8 @@ public class Attach extends WebProvider {
     }
 
     public static URL getVideoUrl() {
-//      String videoUrl  = "http://" + webConfig.getRemoteUrl() + "/video/" + sessionId() + ".mp4";
-      String videoUrl  = "http://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
+      String videoUrl  = "http://" + webConfig.getRemoteUrl() + "/video/" + sessionId() + ".mp4";
+//      String videoUrl  = "http://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
 //        System.out.println(sessionId());
       try {
         return new URL(videoUrl);
