@@ -28,6 +28,11 @@ allure {
 
 dependencies {
     implementation 'net.datafaker:datafaker:1.8.1'
+    implementation("commons-io:commons-io:2.6")
+    implementation("io.qameta.allure:allure-java-commons:2.14.0")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
+    implementation("org.junit.jupiter:junit-jupiter-engine:5.7.2")
+    implementation("org.junit.jupiter:junit-jupiter-params:5.7.2")
 
     testImplementation (
             'com.codeborne:selenide:6.13.0',  // 6.16.0 5.22.0 6.12.3 // 6.19.1 - работает с локальным браузером 120 версии
