@@ -6,6 +6,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.ostrovcy.qademo.base.TestBaseRemote;
 
+/**
+ * @author hso (Sergey Khokhryakov).
+ */
+
+@Layer("web")
+@Owner("hso")
+//@Feature("Issues")
+@Feature("Фичи: \"Elements\", \"Alerts, Frame & Windows\"")
 public class TaskRemoteTest extends TestBaseRemote {
 
   String clickResult = "You have done a dynamic click";
@@ -15,13 +23,14 @@ public class TaskRemoteTest extends TestBaseRemote {
   String promptText = "Test name";
 
   @Test
-  @Owner("Хохряков Сергей")
-  @Description("Данный тест разработан в соотвествии с тестовым заданием")
-  @Feature("Фичи: \"Elements\", \"Alerts, Frame & Windows\"")
+  @TM4J("AE-T3")
   @Story("Элементы на странице demoqa.com")
+  @JiraIssues({@JiraIssue("AE-2")})
+  @Description("Данный тест разработан в соотвествии с тестовым заданием")
   @Severity(SeverityLevel.CRITICAL)
-  @DisplayName("Позитивный тест: Шаги с аннотацией @Step")
   @Tag("remote")
+//  @Tags({@Tag("web"), @Tag("critical")})
+  @DisplayName("Позитивный тест: Шаги с аннотацией @Step")
   public void test() {
     startPage.open()
             .goToElementsCategory()
